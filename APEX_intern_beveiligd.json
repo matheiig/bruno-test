@@ -1,0 +1,111 @@
+{
+  "name": "APEX_intern_beveiligd",
+  "version": "1",
+  "items": [
+    {
+      "type": "http",
+      "name": "v2 doorlichtingsactiviteiten",
+      "filename": "v2 doorlichtingsactiviteiten.bru",
+      "seq": 1,
+      "request": {
+        "url": "https://app.akov.be/pls/pakov/inspectie/insp_apis_sec/v2_doorlichtingsactiviteiten?schooljaar=2024-2025",
+        "method": "GET",
+        "headers": [],
+        "params": [
+          {
+            "name": "schooljaar",
+            "value": "2024-2025",
+            "type": "query",
+            "enabled": true
+          },
+          {
+            "name": "insttypegroep",
+            "value": "GBAO",
+            "type": "query",
+            "enabled": false
+          },
+          {
+            "name": "niveau",
+            "value": "bao",
+            "type": "query",
+            "enabled": false
+          },
+          {
+            "name": "cyclus",
+            "value": "OI2_0-DL-BAO_ONW",
+            "type": "query",
+            "enabled": false
+          },
+          {
+            "name": "JuridischeCons",
+            "value": "JURCONS",
+            "type": "query",
+            "enabled": false
+          },
+          {
+            "name": "offset",
+            "value": "10",
+            "type": "query",
+            "enabled": false
+          },
+          {
+            "name": "limit",
+            "value": "100",
+            "type": "query",
+            "enabled": false
+          }
+        ],
+        "body": {
+          "mode": "none",
+          "formUrlEncoded": [],
+          "multipartForm": [],
+          "file": []
+        },
+        "script": {},
+        "vars": {},
+        "assertions": [],
+        "tests": "",
+        "docs": "# API doorlichtingsactiviteiten\n\n## Wat?\nAPI die alle gekende doorlichtingsactiviteiten in APEX geeft. \n\n## Parameters\nAanvaardt volgende parameters:\n- Schooljaar\n- Instellingstypegroep: GBAO, BUBAO, GSO, BUSO, VWO, CLB, LSC, NAFT, INT\n- Juridische consequentie: doorlichtingen met of zonder juridische consequentie\n- Cyclus: de doorlichtingscyclus",
+        "auth": {
+          "mode": "inherit"
+        }
+      }
+    }
+  ],
+  "environments": [
+    {
+      "variables": [
+        {
+          "name": "omgeving",
+          "value": "https://app.akov.be/pls/pakov/inspectie",
+          "enabled": true,
+          "secret": false,
+          "type": "text"
+        }
+      ],
+      "name": "productie"
+    }
+  ],
+  "root": {
+    "request": {
+      "auth": {
+        "mode": "basic",
+        "basic": {
+          "username": "API-IT",
+          "password": "BladBeveiligen"
+        }
+      }
+    }
+  },
+  "brunoConfig": {
+    "version": "1",
+    "name": "APEX_intern_beveiligd",
+    "type": "collection",
+    "ignore": [
+      "node_modules",
+      ".git"
+    ],
+    "size": 0.0008649826049804688,
+    "filesCount": 3
+  }
+}
