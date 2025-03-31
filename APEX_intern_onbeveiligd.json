@@ -1,0 +1,89 @@
+{
+  "name": "APEX_intern_onbeveiligd",
+  "version": "1",
+  "items": [
+    {
+      "type": "http",
+      "name": "SCA-CLB-DE",
+      "filename": "SCA-CLB-DE.bru",
+      "seq": 2,
+      "request": {
+        "url": "{{omgeving}}/insp_apis/v1_SCA-CLB-DE?schooljaar=2024-2025",
+        "method": "GET",
+        "headers": [],
+        "params": [
+          {
+            "name": "schooljaar",
+            "value": "2024-2025",
+            "type": "query",
+            "enabled": true
+          },
+          {
+            "name": "type_inst",
+            "value": "DE",
+            "type": "query",
+            "enabled": false
+          },
+          {
+            "name": "inst_is_de",
+            "value": "DE",
+            "type": "query",
+            "enabled": false
+          },
+          {
+            "name": "offset",
+            "value": "100",
+            "type": "query",
+            "enabled": false
+          },
+          {
+            "name": "limit",
+            "value": "1000",
+            "type": "query",
+            "enabled": false
+          }
+        ],
+        "body": {
+          "mode": "none",
+          "formUrlEncoded": [],
+          "multipartForm": [],
+          "file": []
+        },
+        "script": {},
+        "vars": {},
+        "assertions": [],
+        "tests": "",
+        "docs": "",
+        "auth": {
+          "mode": "none"
+        }
+      }
+    }
+  ],
+  "activeEnvironmentUid": "2vHpi30I7OpLCnLtQtRoh",
+  "environments": [
+    {
+      "variables": [
+        {
+          "name": "omgeving",
+          "value": "https://app.akov.be/pls/pakov/inspectie",
+          "enabled": true,
+          "secret": false,
+          "type": "text"
+        }
+      ],
+      "name": "productie"
+    }
+  ],
+  "brunoConfig": {
+    "version": "1",
+    "name": "APEX_intern_onbeveiligd",
+    "type": "collection",
+    "ignore": [
+      "node_modules",
+      ".git"
+    ],
+    "size": 0.0003032684326171875,
+    "filesCount": 2
+  }
+}
